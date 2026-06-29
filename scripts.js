@@ -1,28 +1,28 @@
-/* ============================================================
+/* =========================================================
    TRINITY INFRASTRUCTURE — scripts.js
-   Converted from React/TSX to vanilla JS
-   ============================================================ */
+   All interactivity converted from React/TSX source
+   ========================================================= */
 
-/* ── Asset image URLs (Lovable Cloudflare R2 CDN) ── */
+/* ── Asset Image URLs (from Lovable CDN) ── */
 const ASSETS = {
-  logo:     "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/828d5369-4086-4983-9df2-ddfc6870ce59/logo-trinity.png",
-  house1:   "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/b6d3243d-41b7-4af2-9568-e92d44ddb24f/house1.jpeg",
-  house2:   "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/0bfbe98a-ea1a-4ce1-8b6c-e96255656682/house2.jpeg",
-  house3:   "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/ac0be934-8ac3-4017-843e-176c30688e4b/house3.jpeg",
-  house4:   "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/a85323d9-3972-468e-ba24-74365c5a9379/house4.jpeg",
-  plotmap:  "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/242026db-6e11-4403-8c84-3a3e2d76623c/plotmap.jpeg",
-  rainbow:  "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/177d9d1c-d277-4329-bf88-a2214855d03c/rainbow.jpeg",
+  logo:    "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/828d5369-4086-4983-9df2-ddfc6870ce59/logo-trinity.png",
+  house1:  "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/b6d3243d-41b7-4af2-9568-e92d44ddb24f/house1.jpeg",
+  house2:  "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/0bfbe98a-ea1a-4ce1-8b6c-e96255656682/house2.jpeg",
+  house3:  "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/ac0be934-8ac3-4017-843e-176c30688e4b/house3.jpeg",
+  house4:  "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/a85323d9-3972-468e-ba24-74365c5a9379/house4.jpeg",
+  plotmap: "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/242026db-6e11-4403-8c84-3a3e2d76623c/plotmap.jpeg",
+  rainbow: "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/177d9d1c-d277-4329-bf88-a2214855d03c/rainbow.jpeg",
+  pkg:     "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/70f5accc-d737-402f-acc9-0b23e2a6d9ed/package.jpeg",
 };
 
-/* ── Contact info ── */
+/* ── Contact details ── */
 const PHONE     = "+919080987178";
 const WHATSAPP  = "919080987178";
 const EMAIL     = "trinityinfra333@gmail.com";
 
-/* ── Bilingual content ── */
+/* ── Translation data ── */
 const D = {
   en: {
-    lang: "en",
     nav: [["About","#about"],["Services","#services"],["Projects","#projects"],["Rainbow Avenue","#rainbow-section"],["Gallery","#gallery"],["Contact","#contact"]],
     book: "Book Site Visit",
     est: "EST. 2021 · MADURAI",
@@ -38,9 +38,10 @@ const D = {
     ongoing: "Ongoing Projects",
     whoTitle: "— WHO WE ARE",
     aboutH: "A new standard for modern building in Madurai.",
-    aboutP1: "Trinity Infrastructure, founded in 2021 by MG Ravindra David, is a trusted construction and infrastructure company committed to transforming dreams into reality. We specialize in residential construction, DTCP plot development, and expert underground structures including STP and fire tanks.",
+    aboutP1: "Trinity Infrastructure, founded in 2021 by MJ Ravindra David, is a trusted construction and infrastructure company committed to transforming dreams into reality. We specialize in residential construction, DTCP plot development, and expert underground structures including STP and fire tanks.",
     aboutP2: "Our mission: quality construction, transparent dealings, and long-term value for every client.",
-    founder: "FOUNDER",
+    pills: ["Truth","Trust","Technology"],
+    founderLabel: "FOUNDER",
     founderRole: "Founder & Managing Director",
     founderBio: "Since 2021, leading Trinity Infrastructure with a focus on quality construction, DTCP plot development, and pioneering underground structures including STP and fire tanks across Madurai.",
     servTitle: "— OUR SERVICES",
@@ -58,19 +59,15 @@ const D = {
     projTitle: "— FEATURED PROJECTS",
     projH: "Crafted with precision",
     projects: [
-      { name: "The Horizon Villa",    status: "Completed", area: "1350 sqft", date: "2021" },
-      { name: "Arora Residence",      status: "Completed", area: "1300 sqft", date: "2022" },
-      { name: "Rainbow Avenue · NGO Colony", status: "Ongoing", area: "950 sqft / plot", date: "2025" },
+      { name:"The Horizon Villa", status:"Completed", area:"1350 sqft", date:"2021" },
+      { name:"Arora Residence",   status:"Completed", area:"1300 sqft", date:"2022" },
+      { name:"Rainbow Avenue · NGO Colony", status:"Ongoing", area:"950 sqft / plot", date:"2025" },
     ],
-    flagshipLabel: "— FLAGSHIP DEVELOPMENT",
-    rainbowSub: "NGO Colony — Approved DTCP.",
-    rainbowPrice: "Premium plots starting from ₹15 Lakhs. Built around modern living.",
-    specs: [["12","Plots"],["24 ft","Wide Roads"],["40 ft","Water Table"],["DTCP","Approved"]],
-    bookPlot: "Book Your Plot Today",
-    waUs: "WhatsApp Us",
+    flagshipTag: "— FLAGSHIP DEVELOPMENT",
+    areaLabel: "Area", yearLabel: "Year",
     whyTitle: "— WHY CHOOSE TRINITY",
     whyH: "Reasons our clients trust us",
-    why: [
+    whyItems: [
       ["Truth","Honest dealings on every project."],
       ["Trust","Built on transparency and proven delivery."],
       ["Technology","Modern methods, lasting results."],
@@ -95,29 +92,31 @@ const D = {
     getTitle: "— GET IN TOUCH",
     getH: "Let's build together",
     callNow: "Call Now",
-    whatsapp: "WhatsApp",
+    whatsappL: "WhatsApp",
     chat: "Chat instantly",
-    email: "Email",
+    emailL: "Email",
     submit: "Book Site Visit",
     nameL: "Full Name",
     mobileL: "Mobile Number",
-    emailL: "Email",
+    emailLabel: "Email",
     dateL: "Preferred Date",
     interestL: "Project Interested In",
     messageL: "Message",
     underground: "Underground Structures (STP & Fire Tank)",
-    container: "Container Project",
-    residential: "Residential Construction",
+    containerProject: "Container Project",
+    residentialConst: "Residential Construction",
+    thankYou: "Thank you! We'll contact you shortly.",
+    langBtn: "தமிழ்",
     quickLinks: "Quick Links",
     contact: "Contact",
-    founded: "Founded 2021 by MG Ravindra David. Let your dream come true.",
-    areaLabel: "Area",
-    yearLabel: "Year",
-    langBtn: "தமிழ்",
-    thankyou: "Thank you! We'll contact you shortly.",
+    founded: "Founded 2021 by MJ Ravindra David. Let your dream come true.",
+    rainbowSub1: "NGO Colony — DTCP approval in progress.",
+    rainbowSub2: "Premium plots starting from ₹15 Lakhs. Built around modern living.",
+    rainbowFeats: [["950","Sqft / Plot"],["24 ft","Wide Roads"],["40 ft","Water Table"],["DTCP","Approval in Progress"]],
+    bookPlot: "Book Your Plot Today",
+    waUs: "WhatsApp Us",
   },
   ta: {
-    lang: "ta",
     nav: [["எங்களைப் பற்றி","#about"],["சேவைகள்","#services"],["திட்டங்கள்","#projects"],["ரெயின்போ அவென்யூ","#rainbow-section"],["படத்தொகுப்பு","#gallery"],["தொடர்பு","#contact"]],
     book: "தள வருகை பதிவு",
     est: "தொடக்கம் 2021 · மதுரை",
@@ -133,9 +132,10 @@ const D = {
     ongoing: "நடப்பு திட்டங்கள்",
     whoTitle: "— நாங்கள் யார்",
     aboutH: "மதுரையில் நவீன கட்டுமானத்திற்கான புதிய தரம்.",
-    aboutP1: "Trinity Infrastructure, 2021 ஆம் ஆண்டில் MG ரவீந்திர டேவிட் அவர்களால் தொடங்கப்பட்டது. குடியிருப்பு கட்டுமானம், DTCP மனை மேம்பாடு, மற்றும் STP மற்றும் தீ தண்ணீர் தொட்டிகள் உள்ளிட்ட நிலத்தடி கட்டமைப்புகளில் நிபுணத்துவம்.",
+    aboutP1: "Trinity Infrastructure, 2021 ஆம் ஆண்டில் MJ ரவீந்திர டேவிட் அவர்களால் தொடங்கப்பட்டது. குடியிருப்பு கட்டுமானம், DTCP மனை மேம்பாடு, மற்றும் STP மற்றும் தீ தண்ணீர் தொட்டிகள் உள்ளிட்ட நிலத்தடி கட்டமைப்புகளில் நிபுணத்துவம்.",
     aboutP2: "எங்கள் நோக்கம்: தரமான கட்டுமானம், வெளிப்படையான பரிவர்த்தனைகள், நீண்டகால மதிப்பு.",
-    founder: "நிறுவனர்",
+    pills: ["உண்மை","நம்பிக்கை","தொழில்நுட்பம்"],
+    founderLabel: "நிறுவனர்",
     founderRole: "நிறுவனர் & நிர்வாக இயக்குநர்",
     founderBio: "2021 முதல், Trinity Infrastructure-ஐ தரமான கட்டுமானம், DTCP மனை மேம்பாடு மற்றும் மதுரை முழுவதும் STP & தீ தண்ணீர் தொட்டிகள் உள்ளிட்ட நிலத்தடி கட்டமைப்புகளில் முன்னோடியாக வழிநடத்துகிறார்.",
     servTitle: "— எங்கள் சேவைகள்",
@@ -153,19 +153,15 @@ const D = {
     projTitle: "— சிறப்பு திட்டங்கள்",
     projH: "துல்லியத்துடன் உருவாக்கப்பட்டது",
     projects: [
-      { name: "ஹரிசன் வில்லா",             status: "Completed", area: "1350 sqft", date: "2021" },
-      { name: "அரோரா இல்லம்",              status: "Completed", area: "1300 sqft", date: "2022" },
-      { name: "ரெயின்போ அவென்யூ · NGO காலனி", status: "Ongoing",   area: "950 sqft / plot", date: "2025" },
+      { name:"ஹரிசன் வில்லா", status:"Completed", area:"1350 sqft", date:"2021" },
+      { name:"அரோரா இல்லம்",  status:"Completed", area:"1300 sqft", date:"2022" },
+      { name:"ரெயின்போ அவென்யூ · NGO காலனி", status:"Ongoing", area:"950 sqft / plot", date:"2025" },
     ],
-    flagshipLabel: "— முதன்மை திட்டம்",
-    rainbowSub: "NGO காலனி — DTCP அங்கீகாரம் பெற்றது.",
-    rainbowPrice: "₹15 லட்சத்தில் இருந்து சிறப்பு மனைகள். நவீன வாழ்க்கைக்கு ஏற்றவை.",
-    specs: [["12","மனைகள்"],["24 ft","அகலமான சாலைகள்"],["40 ft","நீர் மட்டம்"],["DTCP","அங்கீகாரம் பெற்றது"]],
-    bookPlot: "உங்கள் மனையை பதிவு செய்க",
-    waUs: "வாட்ஸ்அப் செய்க",
+    flagshipTag: "— முதன்மை திட்டம்",
+    areaLabel: "பரப்பு", yearLabel: "ஆண்டு",
     whyTitle: "— ஏன் ட்ரினிட்டி",
     whyH: "வாடிக்கையாளர்கள் எங்களை நம்புவதற்கான காரணங்கள்",
-    why: [
+    whyItems: [
       ["உண்மை","ஒவ்வொரு திட்டத்திலும் நேர்மையான பரிவர்த்தனைகள்."],
       ["நம்பிக்கை","வெளிப்படைத்தன்மை மற்றும் சரியான வழங்கல்."],
       ["தொழில்நுட்பம்","நவீன முறைகள், நீடித்த விளைவுகள்."],
@@ -190,37 +186,39 @@ const D = {
     getTitle: "— தொடர்பு கொள்ளுங்கள்",
     getH: "ஒன்றாக கட்டுவோம்",
     callNow: "இப்போது அழைக்கவும்",
-    whatsapp: "வாட்ஸ்அப்",
+    whatsappL: "வாட்ஸ்அப்",
     chat: "உடனடி அரட்டை",
-    email: "மின்னஞ்சல்",
+    emailL: "மின்னஞ்சல்",
     submit: "பதிவு செய்க",
     nameL: "முழு பெயர்",
     mobileL: "கைபேசி எண்",
-    emailL: "மின்னஞ்சல்",
+    emailLabel: "மின்னஞ்சல்",
     dateL: "விருப்ப தேதி",
     interestL: "ஆர்வமுள்ள திட்டம்",
     messageL: "செய்தி",
     underground: "நிலத்தடி கட்டமைப்பு (STP & தீ தொட்டி)",
-    container: "கண்டெய்னர் திட்டம்",
-    residential: "குடியிருப்பு கட்டுமானம்",
+    containerProject: "கண்டெய்னர் திட்டம்",
+    residentialConst: "குடியிருப்பு கட்டுமானம்",
+    thankYou: "நன்றி! விரைவில் தொடர்பு கொள்வோம்.",
+    langBtn: "EN",
     quickLinks: "விரைவு இணைப்புகள்",
     contact: "தொடர்பு",
-    founded: "2021-ல் MG ரவீந்திர டேவிட் அவர்களால் தொடங்கப்பட்டது.",
-    areaLabel: "பரப்பு",
-    yearLabel: "ஆண்டு",
-    langBtn: "EN",
-    thankyou: "நன்றி! விரைவில் தொடர்பு கொள்வோம்.",
+    founded: "2021-ல் MJ ரவீந்திர டேவிட் அவர்களால் தொடங்கப்பட்டது.",
+    rainbowSub1: "NGO காலனி — DTCP அங்கீகாரம் நடைபெறுகிறது.",
+    rainbowSub2: "₹15 லட்சத்தில் இருந்து சிறப்பு மனைகள். நவீன வாழ்க்கைக்கு ஏற்றவை.",
+    rainbowFeats: [["950","சதுர அடி / மனை"],["24 ft","அகலமான சாலைகள்"],["40 ft","நீர் மட்டம்"],["DTCP","அங்கீகாரம் நடைபெறுகிறது"]],
+    bookPlot: "உங்கள் மனையை பதிவு செய்க",
+    waUs: "வாட்ஸ்அப் செய்க",
   }
 };
 
 /* ── State ── */
-let currentLang = "ta";
+let lang = "en";
 
-/* ── Animated Counter ── */
-function animateCounter(el, to) {
+/* ── Counter animation ── */
+function animateCounter(el, to, suffix) {
   const dur = 1600;
   const start = performance.now();
-  const suffix = el.dataset.suffix || "";
   function tick(now) {
     const p = Math.min(1, (now - start) / dur);
     el.textContent = Math.floor(p * to) + suffix;
@@ -229,76 +227,91 @@ function animateCounter(el, to) {
   requestAnimationFrame(tick);
 }
 
-/* ── Scroll Reveal ── */
-function initReveal() {
-  const io = new IntersectionObserver((entries) => {
+/* ── Intersection observer for reveal + counters ── */
+function setupReveal() {
+  // Fade-up sections
+  const sections = document.querySelectorAll(".section");
+  const sio = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.classList.add("animate-fade-up");
-        io.unobserve(e.target);
+        e.target.style.opacity = "1";
+        sio.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.08 });
+  sections.forEach(s => sio.observe(s));
 
-  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
-
-  /* Counter trigger */
+  // Counters
+  const counters = document.querySelectorAll("[data-counter]");
   const cio = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        const to = parseInt(e.target.dataset.to);
-        animateCounter(e.target, to);
+        const to = parseInt(e.target.dataset.counter);
+        const suffix = e.target.dataset.suffix || "";
+        animateCounter(e.target, to, suffix);
         cio.unobserve(e.target);
       }
     });
-  }, { threshold: 0.3 });
-  document.querySelectorAll(".counter").forEach(el => cio.observe(el));
+  }, { threshold: 0.5 });
+  counters.forEach(c => cio.observe(c));
 }
 
-/* ── Render Page ── */
-function renderPage(t) {
-  const body = document.body;
-  body.classList.toggle("tamil-loose", t.lang === "ta");
+/* ── Toast notification ── */
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 4000);
+}
 
-  /* ── NAV ── */
-  document.getElementById("nav-logo-name").textContent = "TRINITY INFRASTRUCTURE";
-  document.getElementById("nav-logo-tagline").textContent = t.tagline;
-  const navLinks = document.getElementById("nav-links");
-  navLinks.innerHTML = t.nav.map(([l, h]) =>
+/* ── Render all dynamic content ── */
+function render() {
+  const t = D[lang];
+
+  /* NAV */
+  const navLinksEl = document.getElementById("nav-links");
+  navLinksEl.innerHTML = t.nav.map(([l, h]) =>
     `<a href="${h}">${l}</a>`
   ).join("");
-  const mobileNav = document.getElementById("mobile-nav-links");
-  mobileNav.innerHTML = t.nav.map(([l, h]) =>
-    `<a href="${h}" onclick="closeMobileMenu()">${l}</a>`
-  ).join("");
-  document.querySelectorAll(".btn-book-nav, .btn-book-mobile").forEach(el => el.textContent = t.book);
-  document.querySelectorAll(".btn-lang").forEach(el => el.innerHTML = `🌐 ${t.langBtn}`);
 
-  /* ── HERO ── */
-  document.getElementById("hero-badge-text").textContent = t.est;
-  document.getElementById("hero-h1a").textContent = t.h1a;
-  document.getElementById("hero-h1b").textContent = t.h1b;
+  const mobileMenuEl = document.getElementById("mobile-menu");
+  mobileMenuEl.innerHTML = t.nav.map(([l, h]) =>
+    `<a href="${h}" onclick="closeMobileMenu()">${l}</a>`
+  ).join("") + `<a href="#booking-section" class="btn-book" onclick="closeMobileMenu()">${t.book}</a>`;
+
+  document.getElementById("nav-book-btn").textContent  = t.book;
+  document.getElementById("nav-lang-btn").textContent  = "🌐 " + t.langBtn;
+  document.getElementById("nav-tagline").textContent    = t.tagline;
+
+  /* HERO */
+  document.getElementById("hero-est").innerHTML = `<span class="hero-badge-dot animate-pulse"></span>${t.est}`;
+  document.getElementById("hero-h1a").textContent  = t.h1a;
+  document.getElementById("hero-h1b").textContent  = t.h1b;
   document.getElementById("hero-tagline").textContent = t.tagline;
   document.getElementById("hero-intro").textContent = t.intro;
-  document.getElementById("btn-view-projects").textContent = t.viewP;
-  document.getElementById("btn-book-hero").textContent = t.book;
-  document.getElementById("btn-contact-hero").textContent = t.contactUs + " →";
-
+  document.getElementById("hero-btn-projects").textContent = t.viewP;
+  document.getElementById("hero-btn-book").textContent    = t.book;
+  document.getElementById("hero-btn-contact").textContent = t.contactUs + " →";
   const statLabels = [t.years, t.proj, t.clients, t.ongoing];
   document.querySelectorAll(".stat-label").forEach((el, i) => el.textContent = statLabels[i]);
 
-  /* ── ABOUT ── */
-  document.getElementById("about-who").textContent = t.whoTitle;
-  document.getElementById("about-h2").textContent = t.aboutH;
-  document.getElementById("about-p1").textContent = t.aboutP1;
-  document.getElementById("about-p2").textContent = t.aboutP2;
-  document.getElementById("founder-tag").textContent = t.founder;
+  /* ABOUT */
+  document.getElementById("about-tag").textContent   = t.whoTitle;
+  document.getElementById("about-h").textContent     = t.aboutH;
+  document.getElementById("about-p1").textContent    = t.aboutP1;
+  document.getElementById("about-p2").textContent    = t.aboutP2;
+  document.getElementById("founder-tag").textContent = t.founderLabel;
   document.getElementById("founder-role").textContent = t.founderRole;
-  document.getElementById("founder-bio").textContent = t.founderBio;
+  document.getElementById("founder-bio").textContent  = t.founderBio;
+  const pillsEl = document.getElementById("about-pills");
+  pillsEl.innerHTML = t.pills.map(p =>
+    `<div class="pill text-gradient-gold">${p}</div>`
+  ).join("");
 
-  /* ── SERVICES ── */
-  document.getElementById("serv-label").textContent = t.servTitle;
-  document.getElementById("serv-h2").textContent = t.servH;
+  /* SERVICES */
+  document.getElementById("serv-tag").textContent = t.servTitle;
+  document.getElementById("serv-h").textContent   = t.servH;
   const servGrid = document.getElementById("services-grid");
   servGrid.innerHTML = t.services.map(([title, desc, icon]) => `
     <div class="service-card">
@@ -308,154 +321,170 @@ function renderPage(t) {
     </div>
   `).join("");
 
-  /* ── PROJECTS ── */
-  document.getElementById("proj-label").textContent = t.projTitle;
-  document.getElementById("proj-h2").textContent = t.projH;
+  /* PROJECTS */
+  document.getElementById("proj-tag").textContent = t.projTitle;
+  document.getElementById("proj-h").textContent   = t.projH;
   const projImgs = [ASSETS.house1, ASSETS.house3, ASSETS.rainbow];
   const projGrid = document.getElementById("projects-grid");
   projGrid.innerHTML = t.projects.map((p, i) => `
     <article class="project-card">
       <div class="project-img-wrap">
         <img src="${projImgs[i]}" alt="${p.name}" loading="lazy" />
-        <span class="project-badge ${p.status === 'Completed' ? 'badge-completed' : 'badge-ongoing'}">${p.status}</span>
+        <span class="project-badge ${p.status === 'Completed' ? 'badge-complete' : 'badge-ongoing'}">${p.status}</span>
       </div>
       <div class="project-info">
         <h3 class="project-name">${p.name}</h3>
         <div class="project-meta">
-          <span><span class="label">${t.areaLabel}</span> · ${p.area}</span>
-          <span><span class="label">${t.yearLabel}</span> · ${p.date}</span>
+          <span><span class="lbl">${t.areaLabel}</span> · ${p.area}</span>
+          <span><span class="lbl">${t.yearLabel}</span> · ${p.date}</span>
         </div>
       </div>
     </article>
   `).join("");
 
-  /* ── RAINBOW ── */
-  document.getElementById("rainbow-label").textContent = t.flagshipLabel;
-  document.getElementById("rainbow-sub").textContent = t.rainbowSub;
-  document.getElementById("rainbow-price").textContent = t.rainbowPrice;
-  const specsEl = document.getElementById("rainbow-specs");
-  specsEl.innerHTML = t.specs.map(([n, l]) => `
-    <div class="spec-card"><div class="spec-val">${n}</div><div class="spec-label">${l}</div></div>
+  /* RAINBOW AVENUE */
+  document.getElementById("rainbow-tag").textContent  = t.flagshipTag;
+  document.getElementById("rainbow-sub1").textContent = t.rainbowSub1;
+  document.getElementById("rainbow-sub2").textContent = t.rainbowSub2;
+  const rfGrid = document.getElementById("rainbow-feats");
+  rfGrid.innerHTML = t.rainbowFeats.map(([n, l]) => `
+    <div class="feat-card">
+      <div class="feat-num text-gradient-gold">${n}</div>
+      <div class="feat-lbl">${l}</div>
+    </div>
   `).join("");
-  document.getElementById("btn-book-plot").textContent = t.bookPlot;
-  document.getElementById("btn-wa-rainbow").textContent = t.waUs;
+  document.getElementById("rainbow-btn-book").textContent = t.bookPlot;
+  document.getElementById("rainbow-btn-wa").textContent   = t.waUs;
 
-  /* ── WHY US ── */
-  document.getElementById("why-label").textContent = t.whyTitle;
-  document.getElementById("why-h2").textContent = t.whyH;
+  /* WHY US */
+  document.getElementById("why-tag").textContent = t.whyTitle;
+  document.getElementById("why-h").textContent   = t.whyH;
   const whyGrid = document.getElementById("why-grid");
-  whyGrid.innerHTML = t.why.map(([title, desc]) => `
+  whyGrid.innerHTML = t.whyItems.map(([title, desc]) => `
     <div class="why-card">
-      <div class="why-icon">✓</div>
+      <div class="why-check">✓</div>
       <h3 class="why-title">${title}</h3>
       <p class="why-desc">${desc}</p>
     </div>
   `).join("");
 
-  /* ── GALLERY ── */
-  document.getElementById("gal-label").textContent = t.galTitle;
-  document.getElementById("gal-h2").textContent = t.galH;
+  /* GALLERY */
+  document.getElementById("gal-tag").textContent = t.galTitle;
+  document.getElementById("gal-h").textContent   = t.galH;
+  const galImgs = [ASSETS.house1, ASSETS.house2, ASSETS.house3, ASSETS.house4, ASSETS.plotmap, ASSETS.rainbow, ASSETS.pkg, ASSETS.house1];
+  const galGrid = document.getElementById("gallery-grid");
+  galGrid.innerHTML = galImgs.map((url, i) => `
+    <a href="${url}" target="_blank" rel="noreferrer" class="gallery-item${i === 0 ? ' large' : ''}">
+      <img src="${url}" alt="Project ${i+1}" loading="lazy" />
+      <div class="gallery-overlay">View</div>
+    </a>
+  `).join("");
 
-  /* ── TESTIMONIALS ── */
-  document.getElementById("test-label").textContent = t.testTitle;
-  document.getElementById("test-h2").textContent = t.testH;
+  /* TESTIMONIALS */
+  document.getElementById("test-tag").textContent = t.testTitle;
+  document.getElementById("test-h").textContent   = t.testH;
   const testGrid = document.getElementById("test-grid");
-  testGrid.innerHTML = t.testimonials.map(([q, name, loc]) => `
+  testGrid.innerHTML = t.testimonials.map(([q, name, meta]) => `
     <div class="test-card">
       <div class="test-stars">★★★★★</div>
       <p class="test-quote">"${q}"</p>
       <div class="test-name">${name}</div>
-      <div class="test-proj">${loc}</div>
+      <div class="test-meta">${meta}</div>
     </div>
   `).join("");
 
-  /* ── BOOKING ── */
-  document.getElementById("book-label").textContent = t.bookTitle;
-  document.getElementById("book-h2").textContent = t.bookH;
-  document.getElementById("book-p").textContent = t.bookP;
-  document.getElementById("label-name").textContent = t.nameL;
-  document.getElementById("label-mobile").textContent = t.mobileL;
-  document.getElementById("label-email").textContent = t.emailL;
-  document.getElementById("label-date").textContent = t.dateL;
-  document.getElementById("label-interest").textContent = t.interestL;
-  document.getElementById("label-message").textContent = t.messageL;
-  document.getElementById("btn-submit").textContent = t.submit;
+  /* BOOKING */
+  document.getElementById("book-tag").textContent  = t.bookTitle;
+  document.getElementById("book-h").textContent    = t.bookH;
+  document.getElementById("book-p").textContent    = t.bookP;
+  document.getElementById("field-name").textContent    = t.nameL;
+  document.getElementById("field-mobile").textContent  = t.mobileL;
+  document.getElementById("field-email").textContent   = t.emailLabel;
+  document.getElementById("field-date").textContent    = t.dateL;
+  document.getElementById("field-interest").textContent = t.interestL;
+  document.getElementById("field-message").textContent  = t.messageL;
+  document.getElementById("btn-submit").textContent    = t.submit;
+  // Update select options
   const sel = document.getElementById("select-interest");
   sel.innerHTML = `
     <option>Rainbow Avenue (Plots)</option>
-    <option>${t.residential}</option>
+    <option>${t.residentialConst}</option>
     <option>${t.underground}</option>
-    <option>${t.container}</option>
+    <option>${t.containerProject}</option>
   `;
+  // Store thank you msg for form
+  document.getElementById("booking-form").dataset.thanks = t.thankYou;
 
-  /* ── CONTACT ── */
-  document.getElementById("contact-label").textContent = t.getTitle;
-  document.getElementById("contact-h2").textContent = t.getH;
-  document.getElementById("contact-call-lbl").textContent = t.callNow;
-  document.getElementById("contact-wa-lbl").textContent = t.whatsapp;
-  document.getElementById("contact-wa-sub").textContent = t.chat;
-  document.getElementById("contact-em-lbl").textContent = t.email;
+  /* CONTACT */
+  document.getElementById("contact-tag").textContent  = t.getTitle;
+  document.getElementById("contact-h").textContent    = t.getH;
+  document.getElementById("ccard-call-lbl").textContent = t.callNow;
+  document.getElementById("ccard-wa-lbl").textContent   = t.whatsappL;
+  document.getElementById("ccard-wa-sub").textContent   = t.chat;
+  document.getElementById("ccard-email-lbl").textContent = t.emailL;
 
-  /* ── FOOTER ── */
-  document.getElementById("footer-tagline").textContent = t.tagline;
+  /* FOOTER */
+  document.getElementById("footer-tagline").textContent  = t.tagline;
+  document.getElementById("footer-desc").textContent     = t.founded;
   document.getElementById("footer-tagline2").textContent = t.tagline;
-  document.getElementById("footer-desc").textContent = t.founded;
-  document.getElementById("footer-ql-title").textContent = t.quickLinks;
+  document.getElementById("footer-links-title").textContent  = t.quickLinks;
   document.getElementById("footer-contact-title").textContent = t.contact;
   const footerLinks = document.getElementById("footer-links");
-  footerLinks.innerHTML = t.nav.map(([l, h]) => `<li><a href="${h}">${l}</a></li>`).join("");
+  footerLinks.innerHTML = t.nav.map(([l, h]) =>
+    `<li><a href="${h}">${l}</a></li>`
+  ).join("");
+
+  /* YEAR */
+  document.getElementById("footer-year").textContent = new Date().getFullYear();
 }
 
-/* ── Mobile menu ── */
+/* ── Mobile menu toggle ── */
 function closeMobileMenu() {
   document.getElementById("mobile-menu").classList.remove("open");
 }
 
 /* ── Init ── */
 document.addEventListener("DOMContentLoaded", () => {
-  /* Set images */
+  /* Inject asset images */
   document.querySelectorAll("[data-asset]").forEach(el => {
     const key = el.dataset.asset;
     if (ASSETS[key]) el.src = ASSETS[key];
   });
 
-  /* WhatsApp href */
-  document.querySelectorAll("[data-wa]").forEach(el => {
-    el.href = `https://wa.me/${WHATSAPP}`;
-  });
-  document.getElementById("wa-float").href = `https://wa.me/${WHATSAPP}`;
+  /* Set all href links needing assets */
+  document.getElementById("hero-bg-img").src   = ASSETS.house1;
+  document.getElementById("plotmap-img").src    = ASSETS.plotmap;
+  document.getElementById("rainbow-img").src    = ASSETS.rainbow;
+  document.querySelectorAll("[data-logo]").forEach(el => el.src = ASSETS.logo);
 
-  /* Phone href */
-  document.querySelectorAll("[data-phone]").forEach(el => {
-    el.href = `tel:${PHONE}`;
-  });
+  /* Initial render */
+  render();
+  setupReveal();
 
   /* Language toggle */
-  document.querySelectorAll(".btn-lang").forEach(btn => {
-    btn.addEventListener("click", () => {
-      currentLang = currentLang === "en" ? "ta" : "en";
-      renderPage(D[currentLang]);
-    });
+  document.getElementById("nav-lang-btn").addEventListener("click", () => {
+    lang = lang === "en" ? "ta" : "en";
+    render();
   });
 
   /* Mobile menu toggle */
-  document.getElementById("btn-hamburger").addEventListener("click", () => {
-    document.getElementById("mobile-menu").classList.toggle("open");
+  document.getElementById("btn-menu").addEventListener("click", () => {
+    const m = document.getElementById("mobile-menu");
+    m.classList.toggle("open");
   });
 
-  /* Form submit */
-  document.getElementById("booking-form").addEventListener("submit", (e) => {
+  /* Smooth-close mobile menu on nav links */
+  document.getElementById("nav-links").addEventListener("click", e => {
+    if (e.target.tagName === "A") {
+      document.getElementById("mobile-menu").classList.remove("open");
+    }
+  });
+
+  /* Booking form submit */
+  document.getElementById("booking-form").addEventListener("submit", e => {
     e.preventDefault();
-    alert(D[currentLang].thankyou);
-    e.target.reset();
+    const thanks = e.currentTarget.dataset.thanks || "Thank you! We'll contact you shortly.";
+    showToast(thanks);
+    e.currentTarget.reset();
   });
-
-  /* Footer year */
-  document.getElementById("footer-year").textContent = new Date().getFullYear();
-
-  /* Initial render */
-  renderPage(D[currentLang]);
-
-  /* Init scroll reveal */
-  initReveal();
 });
