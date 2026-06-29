@@ -1,276 +1,385 @@
 <!DOCTYPE html>
-<html lang="ta" data-lang="ta">
+<html lang="ta" class="dark">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Trinity Infrastructure — Truth · Trust · Technology | Madurai</title>
-<meta name="description" content="EST. 2021. DTCP-approved plots, modern homes & underground structures (STP & fire tanks) in Madurai. 15+ projects, 50+ happy clients." />
-<meta property="og:title" content="Trinity Infrastructure — Truth · Trust · Technology" />
-<meta property="og:description" content="DTCP-approved plots, modern homes & expert underground structures in Madurai." />
-<meta property="og:image" content="images/house1.jpg" />
-<link rel="icon" type="image/png" href="images/logo.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trinity Infrastructure — Truth · Trust · Technology | Madurai</title>
+  <meta name="description" content="EST. 2021. DTCP-approved plots, modern homes & underground structures (STP & fire tanks) in Madurai. 15+ projects, 50+ happy clients." />
+  <meta name="author" content="Trinity Infrastructure" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Trinity Infrastructure — Truth · Trust · Technology" />
+  <meta property="og:description" content="DTCP-approved plots, modern homes & expert underground structures in Madurai." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/id-preview-12fc843d--df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovable.app-1781887694574.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trinity Infrastructure — Truth · Trust · Technology" />
+  <meta name="twitter:description" content="DTCP-approved plots, modern homes & expert underground structures in Madurai." />
+  <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/id-preview-12fc843d--df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovable.app-1781887694574.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- HEADER / NAV -->
-<header class="nav-header">
-  <div class="container nav-inner">
-    <a href="#top" class="brand">
-      <img src="images/logo.png" alt="Trinity Infrastructure" class="brand-logo" />
-      <div class="brand-text">
-        <div class="brand-name text-gold">TRINITY INFRASTRUCTURE</div>
-        <div class="brand-tag" data-i18n="tagline">உண்மை · நம்பிக்கை · தொழில்நுட்பம்</div>
+<!-- ═══════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════ -->
+<header id="navbar">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a href="#hero" class="nav-logo">
+      <img data-asset="logo" alt="Trinity Infrastructure Logo" />
+      <div class="nav-logo-text">
+        <div class="nav-logo-name" id="nav-logo-name">TRINITY INFRASTRUCTURE</div>
+        <div class="nav-logo-tagline" id="nav-logo-tagline"></div>
       </div>
     </a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#about" data-i18n="nav.about">எங்களைப் பற்றி</a>
-      <a href="#services" data-i18n="nav.services">சேவைகள்</a>
-      <a href="#projects" data-i18n="nav.projects">திட்டங்கள்</a>
-      <a href="#rainbow" data-i18n="nav.rainbow">ரெயின்போ அவென்யூ</a>
-      <a href="#gallery" data-i18n="nav.gallery">படத்தொகுப்பு</a>
-      <a href="#contact" data-i18n="nav.contact">தொடர்பு</a>
-    </nav>
+
+    <!-- Desktop Nav Links -->
+    <nav class="nav-links" id="nav-links"></nav>
+
+    <!-- Actions -->
     <div class="nav-actions">
-      <button id="langBtn" class="btn-ghost" aria-label="Translate">🌐 <span id="langLabel">EN</span></button>
-      <a href="#booking" class="btn-gold btn-book-desktop" data-i18n="book">தள வருகை பதிவு</a>
-      <button id="menuToggle" class="menu-toggle" aria-label="Menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      <button class="btn-lang" aria-label="Toggle language">🌐 EN</button>
+      <a href="#booking-section" class="btn-book-nav">Book Site Visit</a>
+      <button class="btn-hamburger" id="btn-hamburger" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
       </button>
     </div>
   </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu">
+    <div id="mobile-nav-links"></div>
+    <a href="#booking-section" class="btn-book-mobile" onclick="closeMobileMenu()">Book Site Visit</a>
+  </div>
 </header>
 
-<!-- HERO -->
-<section id="top" class="hero">
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════ -->
+<section id="hero">
   <div class="hero-bg">
-    <img src="images/house1.jpg" alt="Modern luxury home by Trinity Infrastructure" />
-    <div class="hero-overlay"></div>
+    <img data-asset="house1" alt="Modern luxury home by Trinity Infrastructure" />
+    <div class="hero-overlay-h"></div>
+    <div class="hero-overlay-v"></div>
   </div>
-  <div class="container hero-content">
-    <div class="pill">
-      <span class="pill-dot"></span>
-      <span data-i18n="est">தொடக்கம் 2021 · மதுரை</span>
-    </div>
-    <h1 class="hero-title">
-      <span class="white" data-i18n="h1a">கனவுகளை கட்டுகிறோம்.</span><br />
-      <span class="text-gold bright" data-i18n="h1b">மதிப்பை உருவாக்குகிறோம்.</span>
-    </h1>
-    <div class="hero-tag" data-i18n="tagline">உண்மை · நம்பிக்கை · தொழில்நுட்பம்</div>
-    <p class="hero-intro" data-i18n="intro">2021 முதல் நம்பகமான கட்டுமான மற்றும் ரியல் எஸ்டேட் சேவைகள் — நவீன வீடுகள், DTCP அங்கீகார மனைகள், மற்றும் சிறந்த நிலத்தடி கட்டமைப்புகள்.</p>
-    <div class="hero-actions">
-      <a href="#projects" class="btn-gold" data-i18n="viewP">திட்டங்களை பார்</a>
-      <a href="#booking" class="btn-ghost" data-i18n="book">தள வருகை பதிவு</a>
-      <a href="tel:+919080987178" class="btn-link"><span data-i18n="contactUs">தொடர்பு கொள்</span> →</a>
-    </div>
-    <div class="stats">
-      <div class="stat glass"><div class="stat-num text-gold" data-count="15" data-suffix="+">15+</div><div class="stat-lbl" data-i18n="years">ஆண்டு அனுபவம்</div></div>
-      <div class="stat glass"><div class="stat-num text-gold" data-count="15" data-suffix="+">15+</div><div class="stat-lbl" data-i18n="proj">நிறைவு பெற்ற திட்டங்கள்</div></div>
-      <div class="stat glass"><div class="stat-num text-gold" data-count="50" data-suffix="+">50+</div><div class="stat-lbl" data-i18n="clients">மகிழ்ச்சியான வாடிக்கையாளர்கள்</div></div>
-      <div class="stat glass"><div class="stat-num text-gold" data-count="3" data-suffix="">3</div><div class="stat-lbl" data-i18n="ongoing">நடப்பு திட்டங்கள்</div></div>
-    </div>
-  </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container grid-2">
-    <div class="reveal">
-      <div class="eyebrow" data-i18n="whoTitle">— நாங்கள் யார்</div>
-      <h2 data-i18n="aboutH">மதுரையில் நவீன கட்டுமானத்திற்கான புதிய தரம்.</h2>
-      <p class="muted" data-i18n="aboutP1">Trinity Infrastructure, 2021 ஆம் ஆண்டில் MG ரவீந்திர டேவிட் அவர்களால் தொடங்கப்பட்டது. குடியிருப்பு கட்டுமானம், DTCP மனை மேம்பாடு, மற்றும் STP மற்றும் தீ தண்ணீர் தொட்டிகள் உள்ளிட்ட நிலத்தடி கட்டமைப்புகளில் நிபுணத்துவம்.</p>
-      <p class="muted" data-i18n="aboutP2">எங்கள் நோக்கம்: தரமான கட்டுமானம், வெளிப்படையான பரிவர்த்தனைகள், நீண்டகால மதிப்பு.</p>
-    </div>
-    <div class="glass card-pad reveal">
-      <div class="eyebrow" data-i18n="founderLbl">நிறுவனர்</div>
-      <div class="founder-name text-gold">MG Ravindra David</div>
-      <div class="founder-role muted" data-i18n="founderRole">நிறுவனர் & நிர்வாக இயக்குநர்</div>
-      <p class="muted small" data-i18n="founderBio">2021 முதல், Trinity Infrastructure-ஐ தரமான கட்டுமானம், DTCP மனை மேம்பாடு மற்றும் மதுரை முழுவதும் STP & தீ தண்ணீர் தொட்டிகள் உள்ளிட்ட நிலத்தடி கட்டமைப்புகளில் முன்னோடியாக வழிநடத்துகிறார்.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="section">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow" data-i18n="servTitle">— எங்கள் சேவைகள்</div>
-      <h2 data-i18n="servH">முழுமையான கட்டுமான & ரியல் எஸ்டேட்</h2>
-    </div>
-    <div class="grid-4" id="servicesGrid"></div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow" data-i18n="projTitle">— சிறப்பு திட்டங்கள்</div>
-      <h2 data-i18n="projH">துல்லியத்துடன் உருவாக்கப்பட்டது</h2>
-    </div>
-    <div class="grid-3" id="projectsGrid"></div>
-  </div>
-</section>
-
-<!-- RAINBOW -->
-<section id="rainbow" class="section banded">
-  <div class="container grid-2">
-    <div class="reveal">
-      <div class="eyebrow" data-i18n="flagship">— முதன்மை திட்டம்</div>
-      <h2 class="big">Rainbow</h2>
-      <h2 class="big text-gold">Avenue</h2>
-      <p class="muted" data-i18n="rainbow1">NGO காலனி — DTCP அங்கீகாரம் பெற்றது.</p>
-      <p class="muted" data-i18n="rainbow2">₹15 லட்சத்தில் இருந்து சிறப்பு மனைகள். நவீன வாழ்க்கைக்கு ஏற்றவை.</p>
-      <div class="grid-2-tight">
-        <div class="glass card-pad-sm"><div class="stat-num text-gold">12</div><div class="stat-lbl" data-i18n="plots">மனைகள்</div></div>
-        <div class="glass card-pad-sm"><div class="stat-num text-gold">24 ft</div><div class="stat-lbl" data-i18n="roads">அகலமான சாலைகள்</div></div>
-        <div class="glass card-pad-sm"><div class="stat-num text-gold">40 ft</div><div class="stat-lbl" data-i18n="water">நீர் மட்டம்</div></div>
-        <div class="glass card-pad-sm"><div class="stat-num text-gold">DTCP</div><div class="stat-lbl" data-i18n="approved">அங்கீகாரம் பெற்றது</div></div>
+  <div class="hero-content">
+    <div class="hero-inner animate-fade-up">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span id="hero-badge-text"></span>
       </div>
-      <div class="hero-actions">
-        <a href="#booking" class="btn-gold" data-i18n="bookPlot">உங்கள் மனையை பதிவு செய்க</a>
-        <a href="https://wa.me/919080987178" class="btn-ghost" data-i18n="waUs">வாட்ஸ்அப் செய்க</a>
+
+      <h1 class="hero-h1">
+        <span class="hero-h1-white" id="hero-h1a"></span><br />
+        <span class="text-gradient-gold" id="hero-h1b"></span>
+      </h1>
+
+      <div class="hero-tagline-small" id="hero-tagline"></div>
+      <p class="hero-intro" id="hero-intro"></p>
+
+      <div class="hero-ctas">
+        <a href="#projects" id="btn-view-projects" class="btn-primary"></a>
+        <a href="#booking-section" id="btn-book-hero" class="btn-outline"></a>
+        <a href="#" data-phone id="btn-contact-hero" class="btn-ghost"></a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number">
+            <span class="counter" data-to="15" data-suffix="+">0+</span>
+          </div>
+          <div class="stat-label"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">
+            <span class="counter" data-to="15" data-suffix="+">0+</span>
+          </div>
+          <div class="stat-label"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">
+            <span class="counter" data-to="50" data-suffix="+">0+</span>
+          </div>
+          <div class="stat-label"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">
+            <span class="counter" data-to="3" data-suffix="">0</span>
+          </div>
+          <div class="stat-label"></div>
+        </div>
       </div>
     </div>
-    <div class="rainbow-imgs reveal">
-      <img src="images/plotmap.jpg" alt="Rainbow Avenue plot layout" />
-      <img src="images/rainbow.jpg" alt="Rainbow Avenue brochure" />
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════════ -->
+<section id="about" class="section reveal">
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="section-label" id="about-who"></div>
+      <h2 class="section-heading" id="about-h2"></h2>
+      <p id="about-p1"></p>
+      <p id="about-p2"></p>
+    </div>
+    <div class="founder-card glass">
+      <div class="founder-tag" id="founder-tag"></div>
+      <div class="founder-name text-gradient-gold">MG Ravindra David</div>
+      <div class="founder-role" id="founder-role"></div>
+      <p class="founder-bio" id="founder-bio"></p>
     </div>
   </div>
 </section>
 
-<!-- WHY -->
-<section id="why" class="section">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow" data-i18n="whyTitle">— ஏன் ட்ரினிட்டி</div>
-      <h2 data-i18n="whyH">வாடிக்கையாளர்கள் எங்களை நம்புவதற்கான காரணங்கள்</h2>
-    </div>
-    <div class="grid-4" id="whyGrid"></div>
+
+<!-- ═══════════════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════════════ -->
+<section id="services" class="section reveal">
+  <div class="section-header">
+    <div class="section-label" id="serv-label"></div>
+    <h2 class="section-heading" id="serv-h2"></h2>
   </div>
+  <div class="services-grid" id="services-grid"></div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery" class="section">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow" data-i18n="galTitle">— திட்ட படத்தொகுப்பு</div>
-      <h2 data-i18n="galH">நாங்கள் உருவாக்கிய இடங்கள்</h2>
-    </div>
-    <div class="gallery-grid">
-      <a class="g-big" href="images/house1.jpg" target="_blank"><img src="images/house1.jpg" alt="Project 1" /></a>
-      <a href="images/house2.jpg" target="_blank"><img src="images/house2.jpg" alt="Project 2" /></a>
-      <a href="images/house3.jpg" target="_blank"><img src="images/house3.jpg" alt="Project 3" /></a>
-      <a href="images/house4.jpg" target="_blank"><img src="images/house4.jpg" alt="Project 4" /></a>
-      <a href="images/plotmap.jpg" target="_blank"><img src="images/plotmap.jpg" alt="Plot map" /></a>
-      <a href="images/rainbow.jpg" target="_blank"><img src="images/rainbow.jpg" alt="Rainbow brochure" /></a>
-    </div>
+
+<!-- ═══════════════════════════════════════════════
+     PROJECTS
+═══════════════════════════════════════════════ -->
+<section id="projects" class="section reveal">
+  <div class="section-header">
+    <div class="section-label" id="proj-label"></div>
+    <h2 class="section-heading" id="proj-h2"></h2>
   </div>
+  <div class="projects-grid" id="projects-grid"></div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow" data-i18n="testTitle">— வாடிக்கையாளர் கருத்துகள்</div>
-      <h2 data-i18n="testH">எங்கள் குடும்பங்கள் என்ன சொல்கின்றன</h2>
-    </div>
-    <div class="grid-3" id="testGrid"></div>
-  </div>
-</section>
 
-<!-- BOOKING + CONTACT -->
-<section id="booking" class="section banded">
-  <div class="container grid-2">
+<!-- ═══════════════════════════════════════════════
+     RAINBOW AVENUE
+═══════════════════════════════════════════════ -->
+<section id="rainbow-section">
+  <div class="rainbow-grid">
     <div>
-      <div class="eyebrow" data-i18n="bookTitle">— தள வருகை பதிவு</div>
-      <h2 data-i18n="bookH">எங்களுடன் தளத்தை பாருங்கள்</h2>
-      <p class="muted" data-i18n="bookP">எப்போது வருவீர்கள் என்று சொல்லுங்கள். ஒரு மணிநேரத்தில் உறுதிசெய்வோம்.</p>
-      <form id="bookingForm" class="form-grid">
-        <label><span data-i18n="name">முழு பெயர்</span><input required type="text" name="name" /></label>
-        <label><span data-i18n="mobile">கைபேசி எண்</span><input required type="tel" name="mobile" /></label>
-        <label><span data-i18n="emailL">மின்னஞ்சல்</span><input required type="email" name="email" /></label>
-        <label><span data-i18n="date">விருப்ப தேதி</span><input required type="date" name="date" /></label>
-        <label class="full"><span data-i18n="interest">ஆர்வமுள்ள திட்டம்</span>
-          <select name="interest">
-            <option>Rainbow Avenue (Plots)</option>
-            <option data-i18n="optRes">குடியிருப்பு கட்டுமானம்</option>
-            <option data-i18n="optUnd">நிலத்தடி கட்டமைப்பு (STP & தீ தொட்டி)</option>
-            <option data-i18n="optCon">கண்டெய்னர் திட்டம்</option>
-          </select>
-        </label>
-        <label class="full"><span data-i18n="message">செய்தி</span><textarea rows="4" name="message"></textarea></label>
-        <button type="submit" class="btn-gold full" data-i18n="submit">பதிவு செய்க</button>
+      <div class="section-label" id="rainbow-label"></div>
+      <h2 class="rainbow-title-main" style="font-family:var(--font-display)">Rainbow</h2>
+      <h2 class="rainbow-title-gold" style="font-family:var(--font-display)">Avenue</h2>
+      <p class="rainbow-sub" id="rainbow-sub"></p>
+      <p class="rainbow-price" id="rainbow-price"></p>
+      <div class="rainbow-specs" id="rainbow-specs"></div>
+      <div class="rainbow-ctas">
+        <a href="#booking-section" id="btn-book-plot" class="btn-primary"></a>
+        <a href="#" data-wa id="btn-wa-rainbow" class="btn-outline"></a>
+      </div>
+    </div>
+    <div class="rainbow-images">
+      <img data-asset="plotmap" alt="Rainbow Avenue plot layout" loading="lazy" />
+      <img data-asset="rainbow" alt="Rainbow Avenue brochure" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     WHY US
+═══════════════════════════════════════════════ -->
+<section id="why" class="section reveal">
+  <div class="section-header">
+    <div class="section-label" id="why-label"></div>
+    <h2 class="section-heading" id="why-h2"></h2>
+  </div>
+  <div class="why-grid" id="why-grid"></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GALLERY
+═══════════════════════════════════════════════ -->
+<section id="gallery" class="section reveal">
+  <div class="section-header">
+    <div class="section-label" id="gal-label"></div>
+    <h2 class="section-heading" id="gal-h2"></h2>
+  </div>
+  <div class="gallery-grid">
+    <a class="gallery-item col-span-2" href="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/b6d3243d-41b7-4af2-9568-e92d44ddb24f/house1.jpeg" target="_blank" rel="noreferrer">
+      <img data-asset="house1" alt="Project 1" loading="lazy" />
+      <div class="gallery-overlay">View</div>
+    </a>
+    <a class="gallery-item" href="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/0bfbe98a-ea1a-4ce1-8b6c-e96255656682/house2.jpeg" target="_blank" rel="noreferrer">
+      <img data-asset="house2" alt="Project 2" loading="lazy" />
+      <div class="gallery-overlay">View</div>
+    </a>
+    <a class="gallery-item" href="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/ac0be934-8ac3-4017-843e-176c30688e4b/house3.jpeg" target="_blank" rel="noreferrer">
+      <img data-asset="house3" alt="Project 3" loading="lazy" />
+      <div class="gallery-overlay">View</div>
+    </a>
+    <a class="gallery-item" href="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/a85323d9-3972-468e-ba24-74365c5a9379/house4.jpeg" target="_blank" rel="noreferrer">
+      <img data-asset="house4" alt="Project 4" loading="lazy" />
+      <div class="gallery-overlay">View</div>
+    </a>
+    <a class="gallery-item" href="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/242026db-6e11-4403-8c84-3a3e2d76623c/plotmap.jpeg" target="_blank" rel="noreferrer">
+      <img data-asset="plotmap" alt="Plot map" loading="lazy" />
+      <div class="gallery-overlay">View</div>
+    </a>
+    <a class="gallery-item" href="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/177d9d1c-d277-4329-bf88-a2214855d03c/rainbow.jpeg" target="_blank" rel="noreferrer">
+      <img data-asset="rainbow" alt="Rainbow Avenue" loading="lazy" />
+      <div class="gallery-overlay">View</div>
+    </a>
+    <a class="gallery-item" href="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5e2cfbf-024b-43bd-af40-e20217a45a50/a/v1/df69eb4b-6af0-4961-ab64-a4d3715ff5f8/b6d3243d-41b7-4af2-9568-e92d44ddb24f/house1.jpeg" target="_blank" rel="noreferrer">
+      <img data-asset="house1" alt="Project 7" loading="lazy" />
+      <div class="gallery-overlay">View</div>
+    </a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════════ -->
+<section class="section reveal">
+  <div class="section-header">
+    <div class="section-label" id="test-label"></div>
+    <h2 class="section-heading" id="test-h2"></h2>
+  </div>
+  <div class="test-grid" id="test-grid"></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     BOOKING + CONTACT
+═══════════════════════════════════════════════ -->
+<section id="booking-section">
+  <div class="booking-grid">
+    <!-- Booking form -->
+    <div>
+      <div class="section-label" id="book-label"></div>
+      <h2 class="section-heading" id="book-h2"></h2>
+      <p style="color:var(--muted-foreground);margin:1rem 0 2rem;line-height:1.7" id="book-p"></p>
+
+      <form class="booking-form" id="booking-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" id="label-name" for="inp-name"></label>
+          <input class="form-input" type="text" id="inp-name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="label-mobile" for="inp-mobile"></label>
+          <input class="form-input" type="tel" id="inp-mobile" name="mobile" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="label-email" for="inp-email"></label>
+          <input class="form-input" type="email" id="inp-email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="label-date" for="inp-date"></label>
+          <input class="form-input" type="date" id="inp-date" name="date" required />
+        </div>
+        <div class="form-group full">
+          <label class="form-label" id="label-interest" for="select-interest"></label>
+          <select class="form-input" id="select-interest" name="interest"></select>
+        </div>
+        <div class="form-group full">
+          <label class="form-label" id="label-message" for="inp-message"></label>
+          <textarea class="form-input" id="inp-message" name="message" rows="4"></textarea>
+        </div>
+        <div class="full">
+          <button type="submit" id="btn-submit" class="btn-primary" style="width:100%;justify-content:center;padding:1rem"></button>
+        </div>
       </form>
     </div>
+
+    <!-- Contact info -->
     <div id="contact">
-      <div class="eyebrow" data-i18n="getTitle">— தொடர்பு கொள்ளுங்கள்</div>
-      <h2 data-i18n="getH">ஒன்றாக கட்டுவோம்</h2>
-      <div class="contact-list">
-        <a href="tel:+919080987178" class="glass contact-card">
-          <span class="ic">📞</span>
-          <div><div class="muted small" data-i18n="callNow">இப்போது அழைக்கவும்</div><div class="bold">+91 90809 87178</div></div>
+      <div class="section-label" id="contact-label"></div>
+      <h2 class="section-heading" id="contact-h2"></h2>
+      <div class="contact-cards" style="margin-top:2rem">
+        <a href="#" data-phone class="contact-card">
+          <span class="contact-icon">📞</span>
+          <div>
+            <div class="contact-sub" id="contact-call-lbl"></div>
+            <div class="contact-val">+91 90809 87178</div>
+          </div>
         </a>
-        <a href="https://wa.me/919080987178" class="glass contact-card">
-          <span class="ic">💬</span>
-          <div><div class="muted small" data-i18n="whatsapp">வாட்ஸ்அப்</div><div class="bold" data-i18n="chat">உடனடி அரட்டை</div></div>
+        <a href="#" data-wa class="contact-card">
+          <span class="contact-icon">💬</span>
+          <div>
+            <div class="contact-sub" id="contact-wa-lbl"></div>
+            <div class="contact-val" id="contact-wa-sub"></div>
+          </div>
         </a>
-        <a href="mailto:trinityinfra333@gmail.com" class="glass contact-card">
-          <span class="ic">✉</span>
-          <div><div class="muted small" data-i18n="email">மின்னஞ்சல்</div><div class="bold">trinityinfra333@gmail.com</div></div>
+        <a href="mailto:trinityinfra333@gmail.com" class="contact-card">
+          <span class="contact-icon">✉</span>
+          <div>
+            <div class="contact-sub" id="contact-em-lbl"></div>
+            <div class="contact-val">trinityinfra333@gmail.com</div>
+          </div>
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="grid-3 footer-top">
-      <div>
-        <div class="brand">
-          <img src="images/logo.png" alt="" class="brand-logo" />
-          <div class="brand-text">
-            <div class="brand-name text-gold">TRINITY INFRASTRUCTURE</div>
-            <div class="brand-tag" data-i18n="tagline">உண்மை · நம்பிக்கை · தொழில்நுட்பம்</div>
-          </div>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img data-asset="logo" alt="Trinity Infrastructure" />
+        <div>
+          <div class="nav-logo-name">TRINITY INFRASTRUCTURE</div>
+          <div class="nav-logo-tagline" id="footer-tagline"></div>
         </div>
-        <p class="muted small" data-i18n="footerBio">2021-ல் MG ரவீந்திர டேவிட் அவர்களால் தொடங்கப்பட்டது.</p>
       </div>
-      <div>
-        <div class="foot-h" data-i18n="quick">விரைவு இணைப்புகள்</div>
-        <ul class="foot-list">
-          <li><a href="#about" data-i18n="nav.about">எங்களைப் பற்றி</a></li>
-          <li><a href="#services" data-i18n="nav.services">சேவைகள்</a></li>
-          <li><a href="#projects" data-i18n="nav.projects">திட்டங்கள்</a></li>
-          <li><a href="#rainbow" data-i18n="nav.rainbow">ரெயின்போ அவென்யூ</a></li>
-          <li><a href="#gallery" data-i18n="nav.gallery">படத்தொகுப்பு</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">தொடர்பு</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="foot-h" data-i18n="contactH">தொடர்பு</div>
-        <ul class="foot-list">
-          <li>+91 90809 87178</li>
-          <li>trinityinfra333@gmail.com</li>
-        </ul>
-      </div>
+      <p class="footer-desc" id="footer-desc"></p>
     </div>
-    <div class="footer-bottom">
-      <div>© <span id="year"></span> Trinity Infrastructure. All rights reserved.</div>
-      <div class="text-gold tracking" data-i18n="tagline">உண்மை · நம்பிக்கை · தொழில்நுட்பம்</div>
+    <div>
+      <div class="footer-col-title" id="footer-ql-title"></div>
+      <ul class="footer-links" id="footer-links"></ul>
     </div>
+    <div>
+      <div class="footer-col-title" id="footer-contact-title"></div>
+      <ul class="footer-contact">
+        <li>+91 90809 87178</li>
+        <li>trinityinfra333@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© <span id="footer-year"></span> Trinity Infrastructure. All rights reserved.</div>
+    <div class="footer-motto" id="footer-tagline2"></div>
   </div>
 </footer>
 
-<a href="https://wa.me/919080987178" target="_blank" class="wa-float" aria-label="WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.157 5.335 5.491 0 12.05 0a11.815 11.815 0 018.413 3.488 11.815 11.815 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.85 9.85 0 001.692 5.527l-.999 3.648 3.796-.874zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+
+<!-- ═══════════════════════════════════════════════
+     FLOATING WHATSAPP
+═══════════════════════════════════════════════ -->
+<a id="wa-float" href="#" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479.976 2.876 2.033 3.375z"/>
+  </svg>
 </a>
 
+<!-- Scripts -->
 <script src="scripts.js"></script>
 </body>
 </html>
