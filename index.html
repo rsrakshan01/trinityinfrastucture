@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trinity Infrastructure — Truth · Trust · Technology | Madurai</title>
+  <meta name="description" content="EST. 2021. DTCP-approved plots, modern homes & underground structures (STP & fire tanks) in Madurai. 15+ projects, 50+ happy clients." />
+  <meta property="og:title" content="Trinity Infrastructure — Truth · Trust · Technology" />
+  <meta property="og:description" content="DTCP-approved plots, modern homes & expert underground structures in Madurai." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════ -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <!-- Brand -->
+    <a href="#top" class="nav-brand">
+      <img data-logo src="" alt="Trinity Infrastructure" />
+      <div>
+        <div class="brand-name text-gradient-gold">TRINITY INFRASTRUCTURE</div>
+        <div id="nav-tagline" class="brand-tag"></div>
+      </div>
+    </a>
+
+    <!-- Desktop nav links -->
+    <div class="nav-links" id="nav-links"></div>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button id="nav-lang-btn" class="btn-lang" aria-label="Translate"></button>
+      <a id="nav-book-btn" href="#booking-section" class="btn-book desktop-only"></a>
+      <button id="btn-menu" class="btn-menu" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <div id="mobile-menu"></div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════ -->
+<section id="top" style="position:relative;min-height:100vh;display:flex;align-items:center;padding-top:5rem;">
+  <div class="hero-bg">
+    <img id="hero-bg-img" src="" alt="Modern luxury home by Trinity Infrastructure" />
+    <div class="hero-overlay-lr"></div>
+    <div class="hero-overlay-tb"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-inner animate-fade-up">
+      <div class="hero-badge" id="hero-est"></div>
+
+      <h1 class="hero-h1">
+        <span class="white" id="hero-h1a"></span><br />
+        <span class="text-gradient-gold" id="hero-h1b"></span>
+      </h1>
+
+      <div class="hero-tagline" id="hero-tagline"></div>
+      <p class="hero-intro" id="hero-intro"></p>
+
+      <div class="hero-btns">
+        <a id="hero-btn-projects" href="#projects" class="btn-primary"></a>
+        <a id="hero-btn-book"     href="#booking-section" class="btn-outline"></a>
+        <a id="hero-btn-contact"  href="tel:+919080987178" class="btn-ghost"></a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number text-gradient-gold">
+            <span data-counter="4" data-suffix="+">0</span>
+          </div>
+          <div class="stat-label"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number text-gradient-gold">
+            <span data-counter="15" data-suffix="+">0</span>
+          </div>
+          <div class="stat-label"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number text-gradient-gold">
+            <span data-counter="50" data-suffix="+">0</span>
+          </div>
+          <div class="stat-label"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number text-gradient-gold">
+            <span data-counter="3" data-suffix="">0</span>
+          </div>
+          <div class="stat-label"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════════ -->
+<section id="about" class="section">
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="section-tag" id="about-tag"></div>
+      <h2 class="section-title" id="about-h"></h2>
+      <p id="about-p1"></p>
+      <p id="about-p2"></p>
+      <div class="about-pills" id="about-pills"></div>
+    </div>
+    <div class="founder-card glass">
+      <div class="section-tag" id="founder-tag"></div>
+      <div class="section-title text-gradient-gold" style="font-size:1.75rem;margin-bottom:0.25rem;">MJ Ravindra David</div>
+      <div class="founder-role" id="founder-role"></div>
+      <p class="founder-bio" id="founder-bio"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════════════ -->
+<section id="services" class="section">
+  <div class="section-center">
+    <div class="section-tag" id="serv-tag"></div>
+    <h2 class="section-title" id="serv-h"></h2>
+  </div>
+  <div class="services-grid" id="services-grid"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     PROJECTS
+═══════════════════════════════════════════════ -->
+<section id="projects" class="section">
+  <div class="section-center">
+    <div class="section-tag" id="proj-tag"></div>
+    <h2 class="section-title" id="proj-h"></h2>
+  </div>
+  <div class="projects-grid" id="projects-grid"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     RAINBOW AVENUE
+═══════════════════════════════════════════════ -->
+<section id="rainbow-section">
+  <div class="rainbow-inner">
+    <div>
+      <div class="section-tag" id="rainbow-tag"></div>
+      <h2 class="rainbow-h">Rainbow</h2>
+      <h2 class="rainbow-h text-gradient-gold" style="margin-bottom:1.5rem;">Avenue</h2>
+      <p class="rainbow-sub" id="rainbow-sub1"></p>
+      <p class="rainbow-sub" id="rainbow-sub2"></p>
+      <div class="rainbow-features" id="rainbow-feats"></div>
+      <div class="rainbow-btns">
+        <a id="rainbow-btn-book" href="#booking-section" class="btn-primary"></a>
+        <a id="rainbow-btn-wa"   href="https://wa.me/919080987178" target="_blank" rel="noreferrer" class="btn-outline"></a>
+      </div>
+    </div>
+    <div class="rainbow-imgs">
+      <img id="plotmap-img"  src="" alt="Rainbow Avenue plot layout" />
+      <img id="rainbow-img"  src="" alt="Rainbow Avenue brochure" />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     WHY US
+═══════════════════════════════════════════════ -->
+<section id="why" class="section">
+  <div class="section-center">
+    <div class="section-tag" id="why-tag"></div>
+    <h2 class="section-title" id="why-h"></h2>
+  </div>
+  <div class="why-grid" id="why-grid"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     GALLERY
+═══════════════════════════════════════════════ -->
+<section id="gallery" class="section">
+  <div class="section-center">
+    <div class="section-tag" id="gal-tag"></div>
+    <h2 class="section-title" id="gal-h"></h2>
+  </div>
+  <div class="gallery-grid" id="gallery-grid"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-center">
+    <div class="section-tag" id="test-tag"></div>
+    <h2 class="section-title" id="test-h"></h2>
+  </div>
+  <div class="test-grid" id="test-grid"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     BOOKING + CONTACT
+═══════════════════════════════════════════════ -->
+<section id="booking-section">
+  <div class="booking-inner">
+
+    <!-- Booking Form -->
+    <div>
+      <div class="section-tag" id="book-tag"></div>
+      <h2 class="section-title" id="book-h"></h2>
+      <p style="color:var(--muted-foreground);margin-bottom:2rem;" id="book-p"></p>
+
+      <form class="booking-form" id="booking-form">
+        <div class="form-group">
+          <label class="form-label" id="field-name"></label>
+          <input type="text" name="name" required class="form-input" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="field-mobile"></label>
+          <input type="tel" name="mobile" required class="form-input" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="field-email"></label>
+          <input type="email" name="email" required class="form-input" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="field-date"></label>
+          <input type="date" name="date" required class="form-input" />
+        </div>
+        <div class="form-group full">
+          <label class="form-label" id="field-interest"></label>
+          <select id="select-interest" class="form-select"></select>
+        </div>
+        <div class="form-group full">
+          <label class="form-label" id="field-message"></label>
+          <textarea name="message" rows="4" class="form-textarea"></textarea>
+        </div>
+        <button type="submit" class="btn-submit" id="btn-submit"></button>
+      </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div id="contact">
+      <div class="section-tag" id="contact-tag"></div>
+      <h2 class="section-title" id="contact-h"></h2>
+
+      <div class="contact-cards">
+        <a href="tel:+919080987178" class="contact-card">
+          <span class="contact-icon">📞</span>
+          <div>
+            <div class="contact-lbl" id="ccard-call-lbl"></div>
+            <div class="contact-val">+91 90809 87178</div>
+          </div>
+        </a>
+        <a href="https://wa.me/919080987178" target="_blank" rel="noreferrer" class="contact-card">
+          <span class="contact-icon">💬</span>
+          <div>
+            <div class="contact-lbl" id="ccard-wa-lbl"></div>
+            <div class="contact-val" id="ccard-wa-sub"></div>
+          </div>
+        </a>
+        <a href="mailto:trinityinfra333@gmail.com" class="contact-card">
+          <span class="contact-icon">✉</span>
+          <div>
+            <div class="contact-lbl" id="ccard-email-lbl"></div>
+            <div class="contact-val">trinityinfra333@gmail.com</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════ -->
+<footer>
+  <div id="footer">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div>
+        <div class="footer-brand">
+          <img data-logo src="" alt="Trinity Infrastructure" />
+          <div>
+            <div style="font-family:var(--font-display);font-size:1.1rem;" class="text-gradient-gold">TRINITY INFRASTRUCTURE</div>
+            <div id="footer-tagline" style="font-size:0.6rem;letter-spacing:0.3em;color:var(--muted-foreground);"></div>
+          </div>
+        </div>
+        <p class="footer-desc" id="footer-desc"></p>
+      </div>
+      <!-- Quick links -->
+      <div>
+        <div class="footer-heading" id="footer-links-title"></div>
+        <ul class="footer-links" id="footer-links"></ul>
+      </div>
+      <!-- Contact -->
+      <div>
+        <div class="footer-heading" id="footer-contact-title"></div>
+        <ul class="footer-contacts">
+          <li>+91 90809 87178</li>
+          <li>trinityinfra333@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© <span id="footer-year"></span> Trinity Infrastructure. All rights reserved.</div>
+      <div class="text-gradient-gold" style="letter-spacing:0.15em;" id="footer-tagline2"></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════
+     FLOATING WHATSAPP
+═══════════════════════════════════════════════ -->
+<a id="wa-float" href="https://wa.me/919080987178" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/>
+  </svg>
+</a>
+
+<!-- ═══════════════════════════════════════════════
+     TOAST NOTIFICATION
+═══════════════════════════════════════════════ -->
+<div id="toast"></div>
+
+<!-- ═══════════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════════ -->
+<script src="scripts.js"></script>
+</body>
+</html>
