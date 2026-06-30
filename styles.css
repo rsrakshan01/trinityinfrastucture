@@ -523,3 +523,6 @@ ul { list-style: none; }
   .why-grid { grid-template-columns: 1fr 1fr; }
   .rainbow-features { grid-template-columns: 1fr 1fr; }
 }
+
+/* ── Tamil typography looseness (matches Lovable .tamil-loose) ── */
+.tamil-loose p, .tamil-loose h1, .tamil-loose h2, .tamil-loose h3, .tamil-loose li { line-height: 1.85; }
