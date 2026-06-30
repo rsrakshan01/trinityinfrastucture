@@ -13,6 +13,8 @@ const ASSETS = {
   plotmap: "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/242026db-6e11-4403-8c84-3a3e2d76623c/plotmap.jpeg",
   rainbow: "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/177d9d1c-d277-4329-bf88-a2214855d03c/rainbow.jpeg",
   pkg:     "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/70f5accc-d737-402f-acc9-0b23e2a6d9ed/package.jpeg",
+  container1: "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/61a15a79-6a46-40ea-9a31-93dd5bb61daa/container1.jpeg",
+  container2: "https://df69eb4b-6af0-4961-ab64-a4d3715ff5f8.lovableproject.com/__l5e/assets-v1/59cb648c-3018-4191-837b-ca6887df3fb8/container2.jpeg",
 };
 
 /* ── Contact details ── */
@@ -38,9 +40,8 @@ const D = {
     ongoing: "Ongoing Projects",
     whoTitle: "— WHO WE ARE",
     aboutH: "A new standard for modern building in Madurai.",
-    aboutP1: "Trinity Infrastructure, founded in 2021 by MJ Ravindra David, is a trusted construction and infrastructure company committed to transforming dreams into reality. We specialize in residential construction, DTCP plot development, and expert underground structures including STP and fire tanks.",
+    aboutP1: "Trinity Infrastructure, founded in 2021 by MG Ravindra David, is a trusted construction and infrastructure company committed to transforming dreams into reality. We specialize in residential construction, DTCP plot development, and expert underground structures including STP and fire tanks.",
     aboutP2: "Our mission: quality construction, transparent dealings, and long-term value for every client.",
-    pills: ["Truth","Trust","Technology"],
     founderLabel: "FOUNDER",
     founderRole: "Founder & Managing Director",
     founderBio: "Since 2021, leading Trinity Infrastructure with a focus on quality construction, DTCP plot development, and pioneering underground structures including STP and fire tanks across Madurai.",
@@ -109,10 +110,10 @@ const D = {
     langBtn: "தமிழ்",
     quickLinks: "Quick Links",
     contact: "Contact",
-    founded: "Founded 2021 by MJ Ravindra David. Let your dream come true.",
-    rainbowSub1: "NGO Colony — DTCP approval in progress.",
+    founded: "Founded 2021 by MG Ravindra David. Let your dream come true.",
+    rainbowSub1: "NGO Colony — Approved DTCP.",
     rainbowSub2: "Premium plots starting from ₹15 Lakhs. Built around modern living.",
-    rainbowFeats: [["950","Sqft / Plot"],["24 ft","Wide Roads"],["40 ft","Water Table"],["DTCP","Approval in Progress"]],
+    rainbowFeats: [["12","Plots"],["24 ft","Wide Roads"],["40 ft","Water Table"],["DTCP","Approved"]],
     bookPlot: "Book Your Plot Today",
     waUs: "WhatsApp Us",
   },
@@ -132,9 +133,8 @@ const D = {
     ongoing: "நடப்பு திட்டங்கள்",
     whoTitle: "— நாங்கள் யார்",
     aboutH: "மதுரையில் நவீன கட்டுமானத்திற்கான புதிய தரம்.",
-    aboutP1: "Trinity Infrastructure, 2021 ஆம் ஆண்டில் MJ ரவீந்திர டேவிட் அவர்களால் தொடங்கப்பட்டது. குடியிருப்பு கட்டுமானம், DTCP மனை மேம்பாடு, மற்றும் STP மற்றும் தீ தண்ணீர் தொட்டிகள் உள்ளிட்ட நிலத்தடி கட்டமைப்புகளில் நிபுணத்துவம்.",
+    aboutP1: "Trinity Infrastructure, 2021 ஆம் ஆண்டில் MG ரவீந்திர டேவிட் அவர்களால் தொடங்கப்பட்டது. குடியிருப்பு கட்டுமானம், DTCP மனை மேம்பாடு, மற்றும் STP மற்றும் தீ தண்ணீர் தொட்டிகள் உள்ளிட்ட நிலத்தடி கட்டமைப்புகளில் நிபுணத்துவம்.",
     aboutP2: "எங்கள் நோக்கம்: தரமான கட்டுமானம், வெளிப்படையான பரிவர்த்தனைகள், நீண்டகால மதிப்பு.",
-    pills: ["உண்மை","நம்பிக்கை","தொழில்நுட்பம்"],
     founderLabel: "நிறுவனர்",
     founderRole: "நிறுவனர் & நிர்வாக இயக்குநர்",
     founderBio: "2021 முதல், Trinity Infrastructure-ஐ தரமான கட்டுமானம், DTCP மனை மேம்பாடு மற்றும் மதுரை முழுவதும் STP & தீ தண்ணீர் தொட்டிகள் உள்ளிட்ட நிலத்தடி கட்டமைப்புகளில் முன்னோடியாக வழிநடத்துகிறார்.",
@@ -203,10 +203,10 @@ const D = {
     langBtn: "EN",
     quickLinks: "விரைவு இணைப்புகள்",
     contact: "தொடர்பு",
-    founded: "2021-ல் MJ ரவீந்திர டேவிட் அவர்களால் தொடங்கப்பட்டது.",
-    rainbowSub1: "NGO காலனி — DTCP அங்கீகாரம் நடைபெறுகிறது.",
+    founded: "2021-ல் MG ரவீந்திர டேவிட் அவர்களால் தொடங்கப்பட்டது.",
+    rainbowSub1: "NGO காலனி — DTCP அங்கீகாரம் பெற்றது.",
     rainbowSub2: "₹15 லட்சத்தில் இருந்து சிறப்பு மனைகள். நவீன வாழ்க்கைக்கு ஏற்றவை.",
-    rainbowFeats: [["950","சதுர அடி / மனை"],["24 ft","அகலமான சாலைகள்"],["40 ft","நீர் மட்டம்"],["DTCP","அங்கீகாரம் நடைபெறுகிறது"]],
+    rainbowFeats: [["12","மனைகள்"],["24 ft","அகலமான சாலைகள்"],["40 ft","நீர் மட்டம்"],["DTCP","அங்கீகாரம் பெற்றது"]],
     bookPlot: "உங்கள் மனையை பதிவு செய்க",
     waUs: "வாட்ஸ்அப் செய்க",
   }
@@ -304,10 +304,6 @@ function render() {
   document.getElementById("founder-tag").textContent = t.founderLabel;
   document.getElementById("founder-role").textContent = t.founderRole;
   document.getElementById("founder-bio").textContent  = t.founderBio;
-  const pillsEl = document.getElementById("about-pills");
-  pillsEl.innerHTML = t.pills.map(p =>
-    `<div class="pill text-gradient-gold">${p}</div>`
-  ).join("");
 
   /* SERVICES */
   document.getElementById("serv-tag").textContent = t.servTitle;
@@ -371,7 +367,7 @@ function render() {
   /* GALLERY */
   document.getElementById("gal-tag").textContent = t.galTitle;
   document.getElementById("gal-h").textContent   = t.galH;
-  const galImgs = [ASSETS.house1, ASSETS.house2, ASSETS.house3, ASSETS.house4, ASSETS.plotmap, ASSETS.rainbow, ASSETS.pkg, ASSETS.house1];
+  const galImgs = [ASSETS.house1, ASSETS.house2, ASSETS.house3, ASSETS.house4, ASSETS.plotmap, ASSETS.rainbow, ASSETS.house1];
   const galGrid = document.getElementById("gallery-grid");
   galGrid.innerHTML = galImgs.map((url, i) => `
     <a href="${url}" target="_blank" rel="noreferrer" class="gallery-item${i === 0 ? ' large' : ''}">
