@@ -483,4 +483,17 @@ document.addEventListener("DOMContentLoaded", () => {
     showToast(thanks);
     e.currentTarget.reset();
   });
+
+  /* Scroll-to-top button */
+  const scrollTopBtn = document.getElementById("scroll-top-btn");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 600) {
+      scrollTopBtn.classList.add("show");
+    } else {
+      scrollTopBtn.classList.remove("show");
+    }
+  }, { passive: true });
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
